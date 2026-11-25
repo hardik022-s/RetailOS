@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: retailos-backend
+    runtime: python
+    rootDir: Backend
+    buildCommand: pip install -r requirements.txt && python manage.py migrate
+    startCommand: gunicorn retail_core.wsgi:application --workers 1 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.14
+      - key: GROQ_API_KEY
+        sync: false
+
+  - type: web
+    name: retailos-frontend
+    runtime: static
+    rootDir: Frontend
+    staticPublishPath: .

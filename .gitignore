@@ -1,0 +1,14 @@
+.env
+*/.env
+Backend/.env
+venv/
+Backend/venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.DS_Store
+.vscode/
+
+# Local datasets
+Backend/data/
+*.csv
