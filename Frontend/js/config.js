@@ -3,7 +3,7 @@
    ========================================================================== */
 const CFG = {
   // Backend API base URL (FastAPI / Express / Django / Flask)
-  API_BASE: window.RETAILOS_API_BASE || 'http://127.0.0.1:8000/api',
+  API_BASE: window.RETAILOS_API_BASE || 'https://retailos-tv8v.onrender.com/api',
 
   // Google OAuth 2.0 Client ID for Google Identity Services (MUST BE IN QUOTES)
   GOOGLE_CLIENT_ID: window.RETAILOS_GOOGLE_CLIENT_ID || '293346691358-e253db2d8ik5lqbhaedh2f9j3vqtjvh3.apps.googleusercontent.com',
@@ -17,5 +17,5 @@ const CFG = {
   PDFJS_WORKER: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js',
 
   // Timeout for backend connectivity ping (ms)
-  HEALTH_TIMEOUT: 2000,
+  HEALTH_TIMEOUT: 15000,
 };
